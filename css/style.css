@@ -1,0 +1,10 @@
+img {
+    display: block;
+    margin: 0;
+    width: 600px;
+    margin-bottom: 20px;
+  }
+
+  li {
+    list-style: none;
+  }

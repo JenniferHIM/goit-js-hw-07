@@ -9,14 +9,14 @@
 
 let counterValue = 0;
 
-const counter = {
+const refs = {
     decreaseValueBtn: document.querySelector('[data-action="decrement"]'),
     increaseValueBtn: document.querySelector('[data-action="increment"]'),
     valueSpan: document.querySelector('#value'),
   };
 
- counter.increaseValueBtn.addEventListener('click', incrementValue);
-counter.decreaseValueBtn.addEventListener('click', decrementValue);
+ refs.increaseValueBtn.addEventListener('click', incrementValue);
+refs.decreaseValueBtn.addEventListener('click', decrementValue);
 
 function incrementValue(){
 	counterValue += 1;
@@ -29,6 +29,6 @@ function incrementValue(){
  }
 
  function newValue() {
-    counter.valueSpan.textContent = counterValue;
+    refs.valueSpan.textContent = counterValue;
   }
 

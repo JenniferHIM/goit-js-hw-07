@@ -26,19 +26,15 @@ const images = [
   ];
 
 
-//   const newImage = document.createElement('li');
-//   console.log(newImage);
-//   newImage.classList.add('list-item');
-//   newImage.textContent = images;
-
-//   gallery.insertAdjacentHTML('afterbegin', '<li>afterbegin item</li>');
-
-// const makeGallery = itemsGallery => {
-//     const {url, alt} = itemsGallery;
-//     return `<li class="image-item"><img src="${url}" alt="${alt}"/></li>`;
-        
-//   };
-
-  // const imagesList = document.querySelector('#gallery');
-  // console.log(imagesList);
-  for(let el of images) document.querySelector('#gallery').insertAdjacentHTML('afterbegin', `<li><img src="${el.url}" alt="${el.alt}"></li>`);
+  const makeGallery = attributesGallery => {
+    const { url, alt } = attributesGallery;
+    return `<li class="image-item"><img src="${url}" alt="${alt}"/></li>`;
+  };
+  
+  const imagesGallery = document.querySelector('#gallery');
+  console.log(imagesGallery);
+  const templateGallery = images.map(makeGallery).join('');
+  
+  imagesGallery.insertAdjacentHTML('afterbegin', templateGallery);
+  
+  console.log(templateGallery);

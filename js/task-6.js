@@ -5,7 +5,7 @@
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
 const input = document.querySelector('#validation-input');
-const minimumInput = + input.getAttribute('data-length');
+const minimumInput =  + input.getAttribute('data-length');
 // console.log(input);
 // console.log(minimumInput);
 
